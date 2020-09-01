@@ -16,7 +16,7 @@ ENV CGO_ENABLED 0
 # 3. remove build programs
 RUN set -ex \
 	&& apk update \
-	&& apk add ca-certificates \
+	&& apk add ca-certificates patch \
 	&& apk add --no-cache --virtual .build-deps \
 	bash \
 	gcc \
